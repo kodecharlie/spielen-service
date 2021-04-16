@@ -1,6 +1,6 @@
 # spielen-service
 
-This project illustrates how to assemble a Java microservice that interacts with the AWS SDK.
+This project illustrates how to assemble a Java microservice that interacts with the AWS SDK.  We leverage Spring Boot for annotation-based service assemblage, maven for dependency management, and Euereka (from Netflix) for the embedded app server that manages the microservice.
 
 ## Prerequisites
 
