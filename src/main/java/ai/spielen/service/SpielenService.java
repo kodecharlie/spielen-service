@@ -34,7 +34,7 @@ public class SpielenService {
    {
       Region region = Region.US_WEST_2;
   
-      ProfileCredentialsProvider pcp = ProfileCredentialsProvider.create("bourbaki");
+      ProfileCredentialsProvider pcp = ProfileCredentialsProvider.create("AWS_CREDENTIALS_PROFILE_GOES_HERE");
       S3Client s3 = S3Client.builder().credentialsProvider(pcp).region(region).build();
   
       String bucket = "bucket" + System.currentTimeMillis();
