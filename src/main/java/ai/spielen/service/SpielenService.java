@@ -59,7 +59,7 @@ public class SpielenService {
       return String.format("Done testing %s!", name);
    }
 
-   public static void tutorialSetup(S3Client s3Client, String bucketName, Region region) {
+   private void tutorialSetup(S3Client s3Client, String bucketName, Region region) {
       try {
         s3Client.createBucket(CreateBucketRequest.builder().bucket(bucketName)
             .createBucketConfiguration(CreateBucketConfiguration.builder().locationConstraint(region.id()).build())
@@ -74,7 +74,7 @@ public class SpielenService {
       }
     }
 
-    public static void cleanUp(S3Client s3Client, String bucketName, String keyName) {
+    private void cleanUp(S3Client s3Client, String bucketName, String keyName) {
       System.out.println("Cleaning up...");
       try {
         System.out.println("Deleting object: " + keyName);
